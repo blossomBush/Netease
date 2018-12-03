@@ -56,8 +56,8 @@
   @import "../../common/stylus/mixins.styl"
 
   .footer_guide
-    border-top: 1px solid #999;
-    border-bottom: 1px solid #999;
+    border-top: 1px solid #FAFAFA;
+    border-bottom: 1px solid #FAFAFA;
     position fixed
     left 0
     bottom 0

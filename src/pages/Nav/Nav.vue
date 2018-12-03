@@ -43,6 +43,7 @@
     /*padding-bottom 6px*/
     display flex
     flex-wrap nowrap
+    background: #fff
     .navList
       width 100%
       padding-bottom 6px
@@ -51,19 +52,18 @@
       align-items center
       flex-wrap  nowrap
       flex-direction row
-      padding-left 15px
+      padding-left 0.4rem
       .navList_item
         display flex
         flex-wrap nowrap
         justify-content space-around
         width 3rem
         height 1rem
-        margin-right 5px
+        margin-right 0.1rem
         &.active
           span
             position relative
             color red
-
             &:after
               content ''
               width .7rem

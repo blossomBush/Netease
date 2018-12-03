@@ -22,25 +22,26 @@
   @import "../../common/stylus/mixins.styl"
   #header
     width 100%
-    height 1rem
-    padding 8px
+    height 0.8em
+    padding 0.2rem
     display flex
     justify-content space-between
     align-items center
+    background #fff
     .header_title
       font-size 0.45rem
       font-weight bold
       width 23%
     .search
       width 70%
-      height 0.8rem
+      height 0.5rem
       font-size 0.049rem
       background-color: #ededed
       display flex
       justify-content center
       align-items center
-      border-radius 5px
-      margin-right 17px
+      border-radius 0.1rem
+      margin-right 0.2rem
       .icon_search
         font-size 0.3733rem
       .search_title

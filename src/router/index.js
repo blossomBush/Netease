@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import Home from '../pages/home/Home.vue'
-import Classify from '../pages/classify/Classify.vue'
-import Details from '../pages/details/Details.vue'
-import Cart from '../pages/cart/Cart.vue'
-import Personal from '../pages/personal/Personal.vue'
+const Home = () => import('../pages/home/Home.vue')
+const Classify = () => import('../pages/classify/Classify.vue')
+const Details = () => import('../pages/details/Details.vue')
+const Cart = () => import('../pages/cart/Cart.vue')
+const Personal = () => import('../pages/personal/Personal.vue')
+
 
 //注册路由组件
 Vue.use(VueRouter)
