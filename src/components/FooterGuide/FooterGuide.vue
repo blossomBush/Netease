@@ -1,5 +1,5 @@
 <template>
-  <div class="footer_guide border-1px">
+  <div class="footer_guide border-1px" v-if="$route.meta.showFooter">
     <a href="javascript:;" class="guide_item" @click="goto('/home')"
        :class="{on: isChange('/home')}" >
       <span class="icon_item">

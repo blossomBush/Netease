@@ -42,7 +42,7 @@
       align-items center
       border-radius 0.1rem
       margin-right 0.2rem
-      .icon_search
+      .icon-search
         font-size 0.3733rem
       .search_title
         font-size 0.3733rem

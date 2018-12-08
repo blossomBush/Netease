@@ -1,10 +1,10 @@
 <template>
-  <div class="goodsWrap">
+  <div :class="'goodsWrap'+a">
     <div class="goods ellipsis">
       <div class="good" v-for="item in data" :key="item.id">
         <a href="javascript:;">
           <div class="image">
-            <img :src="item.primaryPicUrl" alt="">
+            <img v-lazy="item.primaryPicUrl" alt="">
           </div>
           <div class="name ellipsis">{{item.name}}</div>
           <div class="nameDoc ellipsis">{{item.simpleDesc}}</div>
@@ -19,11 +19,13 @@
   import BScroll from 'better-scroll'
   export default {
     props: {
-      data: Array
+      data: Array,
+      a: String
     },
     mounted() {
       this.$nextTick(() => {
-        this.scroll = new BScroll('.goodsWrap', {
+        const a = this.a
+        new BScroll('.goodsWrap'+a, {
           scrollX: true,
           click: true
         })
@@ -35,7 +37,42 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import "../../../common/stylus/mixins.styl"
 
-  .goodsWrap
+  .goodsWrap1
+    height 4.7rem
+    overflow hidden
+    margin 0.22rem 0
+    background #ffffff
+    .goods
+      height 100%
+      margin-left 0.4rem
+      float left
+      .good
+        display inline-block
+        width 3rem
+        height 4.7rem
+        margin 0 0.4rem 0.4rem 0
+        vertical-align middle
+        a
+          width 3rem
+          height 4.7rem
+          .image
+            width 3rem
+            height 3rem
+            background #f4f4f4
+            img
+              width 100%
+              height 100%
+          .name
+            font-size 0.4rem
+            color #333
+          .nameDoc
+            font-size 0.3rem
+            color #333
+            margin 0.2rem 0
+          .price
+            font-size 0.3rem
+            color #333
+  .goodsWrap2
     height 4.7rem
     overflow hidden
     margin 0.22rem 0

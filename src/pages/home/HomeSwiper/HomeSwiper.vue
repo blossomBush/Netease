@@ -4,7 +4,7 @@
     <div class="swiper-container">
       <div class="swiper-wrapper" ref="swiper" >
         <div class="swiper-slide" v-for="item in homeData.focusList" :key="item.id">
-          <img :src="item.picUrl" alt="">
+          <img v-lazy="item.picUrl" alt="">
         </div>
       </div>
       <!-- Add Pagination -->
@@ -52,7 +52,7 @@
 
   #homeShow
     width 100%
-    background: #fff
+    background #fff
     .swiper-container
       width 100%
       height 5.3rem
@@ -76,5 +76,5 @@
       div
         font-size 12px
         i
-          color:#b4282d;
+          color #b4282d
 </style>

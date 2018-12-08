@@ -16,7 +16,7 @@
           <span class="brand">{{item.name}}</span>
           <span class="item_price">{{item.floorPrice}}</span>
         </div>
-        <img :src="item.picUrl" alt="">
+        <img v-lazy="item.picUrl" alt="">
       </div>
     </div>
   </section>
@@ -32,7 +32,7 @@
         </a>
       </div>
       <!--滑动图-->
-      <GoodList :data="homeData.newItemNewUserList"/>
+      <GoodList :data="homeData.newItemNewUserList" a="1"/>
   </section>
     <!--人气推荐-->
     <section class="newProduct">
@@ -46,7 +46,7 @@
         </a>
       </div>
       <!--滑动图-->
-      <GoodList :data="homeData.popularItemList"/>
+      <GoodList :data="homeData.popularItemList" a="2"/>
     </section>
   </div>
 </template>

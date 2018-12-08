@@ -7,22 +7,28 @@
     <div class="home_container">
       <HomeSwiper/>
       <BrandShow/>
+      <Goods :data="homeData.cateList"></Goods>
     </div>
   </div>
 </template>
 
 <script>
-
+  import {mapState} from 'vuex'
   import Header from '../../components/Header/Header.vue'
   import Nav from '../../pages/Nav/Nav.vue'
   import HomeSwiper from './HomeSwiper/HomeSwiper.vue'
   import BrandShow from './BrandShow/BrandShow.vue'
+  import Goods from './Goods/Goods.vue'
   export default {
     components: {
       Header,
       Nav,
       HomeSwiper,
-      BrandShow
+      BrandShow,
+      Goods
+    },
+    computed: {
+      ...mapState(['homeData'])
     }
   }
 </script>
